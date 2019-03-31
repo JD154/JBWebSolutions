@@ -1,3 +1,148 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+/**
+ * ReSass.
+ *
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for seven different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE:
+ *	@include r(240)  { }
+ *	@include r(320)  { }
+ *	@include r(480)  { }
+ *	@include r(768)  { }
+ *	@include r(1024) { }
+ *	@include r(1140) { }
+ *	@include r(1280) { }
+ *  @include r(1500) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+ * 	  @include r(320)  { display: none; }
+ * }
+ *
+ * @author  Ahmad Awais (https://github.com/ahmadawais)
+ * @link    https://github.com/ahmadawais/ReSass.git
+ * @version 1.0.0
+ */
+.container {
+  margin: 0 auto;
+  height: 100%;
+  /*     max-width: 1280px; */
+  width: 90%;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 85%;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    width: 70%;
+  }
+}
+@keyframes scroll-animation {
+  0% {
+    transform: translateY(5px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(35px);
+    opacity: 0;
+  }
+}
+/* rubik-300 - latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Rubik Light"), local("Rubik-Light"), url("../fonts/rubik-v8-latin-300.woff2") format("woff2"), url("../fonts/rubik-v8-latin-300.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* rubik-regular - latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Rubik"), local("Rubik-Regular"), url("../fonts/rubik-v8-latin-regular.woff2") format("woff2"), url("../fonts/rubik-v8-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* rubik-500 - latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Rubik Medium"), local("Rubik-Medium"), url("../fonts/rubik-v8-latin-500.woff2") format("woff2"), url("../fonts/rubik-v8-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* rubik-500italic - latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: italic;
+  font-weight: 500;
+  src: local("Rubik Medium Italic"), local("Rubik-MediumItalic"), url("../fonts/rubik-v8-latin-500italic.woff2") format("woff2"), url("../fonts/rubik-v8-latin-500italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 /* $font-headline: 24px regular;
 $font-title: 20px medium;
 $font-subheader: 16px regular;
@@ -5,5 +150,196 @@ $font-body2: 14px medium;
 $font-body1: 14px regular;
 $font-caption: 12px regular;
 $font-button: 12px medium capitalize; */
+.section-title {
+  display: flex;
+  justify-content: center;
+}
+.section-title h1 {
+  position: relative;
+  color: #515f6c;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 20px 0;
+}
+.section-title h1::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  right: 0;
+  width: 70%;
+  height: 2px;
+  margin: 0 auto;
+  background: #667eea linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.contrast-section {
+  background-color: #F7F7F7;
+}
+
+.section-padding {
+  padding: 50px 0;
+  height: 100vh;
+}
+
+.btn-flat {
+  width: 160px;
+  height: 45px;
+  background: none;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero-header {
+  padding-top: 50px;
+  background: #667eea linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  transition: padding 0.4s cubic-bezier(0, 0, 0.2, 1);
+}
+.hero-header.scroll {
+  padding: 10px 0;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-brand {
+  width: 160px;
+  height: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 480px) {
+  .logo-brand {
+    margin: 0;
+  }
+}
+
+.nav-links {
+  display: none;
+  list-style: none;
+  position: relative;
+}
+@media (min-width: 480px) {
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  .nav-links li {
+    padding: 0 24px;
+  }
+}
+
+.section-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.5;
+  font-weight: 300;
+  font-size: 14px;
+  transition: opacity 0.4s cubic-bezier(0, 0, 0.2, 1);
+}
+.section-link.current {
+  opacity: 1;
+}
+
+.indicator {
+  position: absolute;
+  bottom: 0;
+  width: 38px;
+  left: 24px;
+  right: 62px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  transform-origin: center;
+}
+
+.big-hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: #667eea linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+.header-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-message {
+  margin: auto;
+  color: #ffffff;
+  max-width: 550px;
+}
+.header-message h1, .header-message h2 {
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.header-message h2 {
+  font-size: 3rem;
+}
+.header-message h1 {
+  font-size: 4rem;
+}
+.header-message p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.header-btn {
+  display: flex;
+  justify-content: center;
+}
+.header-btn .btn-flat:first-child {
+  margin-right: 32px;
+}
+
+.scroll-wrapper {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-icon {
+  position: relative;
+  width: 25px;
+  height: 40px;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  opacity: 0.2;
+}
+.scroll-icon::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: scroll-animation 1.5s cubic-bezier(0, 0, 0.2, 1) 1s infinite;
+}
+.scroll-icon::after:hover {
+  animation-play-state: paused;
+}
 
 /*# sourceMappingURL=main.css.map */

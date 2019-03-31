@@ -1,0 +1,84 @@
+.big-hero{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: $gradient-bg;
+}
+
+.header-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-message{
+    margin: auto;
+    color: #ffffff;
+    max-width: 550px;
+
+    h1, h2{
+        font-weight: 500;
+        font-style: italic;
+        margin-bottom: 24px;
+    }
+
+    h2{
+        font-size: 3rem;
+    }
+
+    h1{
+        font-size: 4rem;
+    }
+
+    p{
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+}
+
+.header-btn{
+    display: flex;
+    justify-content: center;
+
+    .btn-flat:first-child{
+        margin-right: 32px;
+    }
+}
+
+.scroll-wrapper{
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-icon{
+    position: relative;
+    width: 25px;
+    height: 40px;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    opacity: 0.2;
+
+    &::after{
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 0;
+        width: 7px;
+        height: 7px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        margin: 0 auto;
+        animation: scroll-animation 1.5s cubic-bezier(0.0, 0.0, 0.2, 1) 1s infinite;
+        &:hover{
+            animation-play-state: paused;
+        }
+    }
+
+}

@@ -1,0 +1,34 @@
+.section-title{
+    display: flex;
+    justify-content: center;
+
+    h1{
+        position: relative;
+        color: $grey-shade4;
+        font-size: 32px;
+        font-weight: 500;
+        margin: 20px 0;
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            right: 0;
+            width: 70%;
+            height: 2px;
+            margin: 0 auto;
+            background: $gradient-bg;
+            border-radius: 2px;
+        }
+    }
+}
+
+.contrast-section{
+    background-color: $contrast-bg;
+}
+
+.section-padding{
+    padding: 50px 0;
+    height: 100vh;
+}

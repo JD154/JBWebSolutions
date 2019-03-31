@@ -1,6 +1,16 @@
 // base files
-
 @import 'base/reset';
+@import 'base/resass';
+@import 'base/variables';
+@import 'base/container';
+@import 'base/keyframes';
 @import 'base/color-system';
 @import 'base/font-system';
-@import 'base/variables';
+
+//component files
+@import 'components/sections';
+@import 'components/buttons';
+
+//page files
+@import 'layout/nav-bar';
+@import 'layout/big-hero';

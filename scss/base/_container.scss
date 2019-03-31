@@ -1,0 +1,17 @@
+.container {
+    margin: 0 auto;
+    height: 100%;
+/*     max-width: 1280px; */
+    width: 90%;
+}
+
+@include r(1024){
+    .container{
+        width: 85%;
+    }
+}
+@include r(1280){
+    .container{
+        width: 70%;
+    }
+}

@@ -1,6 +1,8 @@
+// third party sass
+@import 'vendor/resass';
+
 // base files
 @import 'base/reset';
-@import 'base/resass';
 @import 'base/variables';
 @import 'base/container';
 @import 'base/keyframes';
@@ -13,4 +15,6 @@
 
 //page files
 @import 'layout/nav-bar';
+@import 'layout/sidenav';
 @import 'layout/big-hero';
+@import 'layout/footer';

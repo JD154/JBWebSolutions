@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     navBarScrollSpy();
+    displayMobileNav();
 }, false);
 
 function navBarScrollSpy(){
     let nav = document.querySelector('#navbar');
     let navLinks = document.querySelectorAll(".section-link");
     let indicator = document.querySelector(".indicator");
-
+    let bigHeroSection = document.querySelector('#hero').clientHeight;
+    
     window.addEventListener('scroll', () => {
-        let fromTop = window.scrollY + 50;
+        const sectionPadding = 50;
+        let fromTop = window.scrollY + sectionPadding;
 
         navLinks.forEach(link => {
             let sectionHash = document.querySelector(link.hash);
@@ -29,6 +32,9 @@ function navBarScrollSpy(){
             nav.className = 'hero-header'; 
         else 
             nav.className = 'hero-header scroll';
+
+        if(this.scrollY > (bigHeroSection - sectionPadding))
+         nav.className = 'hero-header scroll box-shadow';
     })
 }
 
@@ -44,4 +50,20 @@ function animateIndicator(link, indicator){
     setTimeout(() => {
         indicator.classList.remove("active");
     }, 400);
+}
+
+function displayMobileNav(){
+    let burgerBtn = document.querySelector(".sidenav-trigger");
+    let sideNav = document.querySelector(".sidenav");
+    let darkOverlay = document.querySelector(".dark-overlay");
+
+    burgerBtn.addEventListener('click', () => {
+        sideNav.classList.add("sidenav-visible");
+        darkOverlay.classList.add("overlay-visible");
+
+        darkOverlay.addEventListener('click', () => {
+            sideNav.classList.remove("sidenav-visible");
+            darkOverlay.classList.remove("overlay-visible");
+        });
+    })
 }

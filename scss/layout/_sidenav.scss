@@ -9,6 +9,7 @@
     }
 
     i{
+        position: relative;
         font-size: 24px;
         color: #ffffff;
         align-self: center;
@@ -30,6 +31,41 @@
 
 .sidenav-visible{
     transform: translateX(0);
+}
+
+.sidenav-header{
+    height: 100px;
+    width: 100%;
+}
+
+.sidenav-links{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    li{
+        display: flex;
+        align-content: center;
+        align-items: center;
+        height: 45px;
+        padding: 0 30px;
+        
+        i{
+            font-size: 16px;
+            color: $grey-shade8;
+            margin-right: 10px;
+        }
+        
+        a{
+            text-decoration: none;
+            color: $grey-shade4;
+        }
+
+        &:hover{
+            background-color: $grey-shade9;
+            cursor: pointer;
+        }
+    }
 }
 
 .dark-overlay{

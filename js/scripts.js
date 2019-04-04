@@ -56,6 +56,7 @@ function displayMobileNav(){
     let burgerBtn = document.querySelector(".sidenav-trigger");
     let sideNav = document.querySelector(".sidenav");
     let darkOverlay = document.querySelector(".dark-overlay");
+    let sideNavLinks = document.querySelectorAll(".sidenav-links > li > a");
 
     burgerBtn.addEventListener('click', () => {
         sideNav.classList.add("sidenav-visible");
@@ -64,6 +65,14 @@ function displayMobileNav(){
         darkOverlay.addEventListener('click', () => {
             sideNav.classList.remove("sidenav-visible");
             darkOverlay.classList.remove("overlay-visible");
+        }, false);
+
+        sideNavLinks.forEach(anchor => {
+            anchor.addEventListener("click", () =>{
+                sideNav.classList.remove("sidenav-visible");
+                darkOverlay.classList.remove("overlay-visible");
+            }, false);
         });
-    })
+
+    }, false);
 }

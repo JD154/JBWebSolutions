@@ -70,8 +70,8 @@
     text-transform: uppercase;
     color: #ffffff;
     opacity: 0.5;
-    font-weight: 300;
-    font-size: 14px;
+    font-family: 'Rubik-light', sans-serif;
+    font-size: 0.8em;
     transition: opacity 0.4s cubic-bezier(0.0, 0.0, 0.2, 1);
 
     &.current, &:hover{

@@ -1,0 +1,85 @@
+.skill-wrapper{
+    min-width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-bottom: 20px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.skill-name, .skill-percent{
+    font-family: 'Rubik-light', sans-serif;
+    font-size: 0.8em;
+    color: $grey-shade5;
+}
+
+.skill-progress{
+    position: relative;
+    width: 100%;
+    height: 7px;
+    margin: 5px 0;
+    background-color: $grey-shade9;
+    border-radius: $main-border-radius;
+
+    &:after{
+        position: absolute;
+        content: '';
+        height: 7px;
+        border-radius: $main-border-radius;
+        background: $gradient-bg;
+    }
+}
+
+#html5::after{
+    width: 66%;
+}
+#css3::after{
+    width: 90%;
+}
+#js::after{
+    width: 45%;
+}
+#design::after{
+    width: 50%;
+}
+
+.skill-percent{
+    align-self: flex-end;
+}
+
+.skill-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    
+    @include r(768){
+        max-width: 90%;
+    }
+}
+
+.skill-header{
+    margin-bottom: 20px;
+    font-family: 'Rubik-medium', sans-serif;
+    font-size: 1.5em;
+    color: $grey-shade4;
+}
+
+.skill-paragraph{
+    font-size: 0.8em;
+    color: $grey-shade5;
+    margin: 5px 0;
+    
+    @include r(768){
+        max-width: 75%;
+    }
+}
+
+.skill-btn{
+    margin-top: 24px;
+    align-self: flex-end;
+}

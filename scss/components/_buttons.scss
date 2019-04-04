@@ -1,16 +1,24 @@
-.btn-flat{
+.btn{
     width: 140px;
     height: 45px;
-    background: none;
-    border: 1px solid #ffffff;
     border-radius: $main-border-radius;
     cursor: pointer;
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 0.8em;
+    font-family: 'Rubik-light', sans-serif;
     text-transform: uppercase;
     color: #ffffff;
-
+    
     @include r(480){
         width: 160px;
     }
+}
+
+.btn-flat{
+    background: none;
+    border: 1px solid #ffffff;
+}
+
+.btn-gradient{
+    background: $gradient-bg;
+    border: none;
 }

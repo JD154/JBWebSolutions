@@ -1,5 +1,5 @@
 .btn-flat{
-    width: 160px;
+    width: 140px;
     height: 45px;
     background: none;
     border: 1px solid #ffffff;
@@ -9,4 +9,8 @@
     font-weight: 300;
     text-transform: uppercase;
     color: #ffffff;
+
+    @include r(480){
+        width: 160px;
+    }
 }

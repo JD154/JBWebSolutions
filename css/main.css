@@ -158,7 +158,7 @@ $font-button: 12px medium capitalize; */
 .section-title h1 {
   position: relative;
   color: #515f6c;
-  font-size: 32px;
+  font-size: 1.8rem;
   font-weight: 500;
   margin: 20px 0;
 }
@@ -181,11 +181,42 @@ $font-button: 12px medium capitalize; */
 
 .section-padding {
   padding: 50px 0;
-  height: 100vh;
+  height: 100%;
+  /*     min-height: 650px; */
+}
+
+.split-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+}
+@media (min-width: 768px) {
+  .split-view {
+    flex-direction: row;
+  }
+}
+
+.split-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.split-col:first-child {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .split-col {
+    width: 50%;
+  }
+  .split-col:first-child {
+    margin-bottom: 0;
+  }
 }
 
 .btn-flat {
-  width: 160px;
+  width: 140px;
   height: 45px;
   background: none;
   border: 1px solid #ffffff;
@@ -195,6 +226,11 @@ $font-button: 12px medium capitalize; */
   font-weight: 300;
   text-transform: uppercase;
   color: #ffffff;
+}
+@media (min-width: 480px) {
+  .btn-flat {
+    width: 160px;
+  }
 }
 
 .hero-header {
@@ -396,16 +432,58 @@ $font-button: 12px medium capitalize; */
   margin-bottom: 24px;
 }
 .header-message h2 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .header-message h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 .header-message p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 300;
   text-align: center;
   margin-bottom: 32px;
+}
+@media (min-width: 480px) {
+  .header-message h2 {
+    font-size: 2.5rem;
+  }
+  .header-message h1 {
+    font-size: 3rem;
+  }
+  .header-message p {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+}
+@media (min-width: 768px) {
+  .header-message h2 {
+    font-size: 2.5rem;
+  }
+  .header-message h1 {
+    font-size: 3.5rem;
+  }
+  .header-message p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .header-message h2 {
+    font-size: 3rem;
+  }
+  .header-message h1 {
+    font-size: 4rem;
+  }
+  .header-message p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 32px;
+  }
 }
 
 .header-btn {
@@ -445,6 +523,51 @@ $font-button: 12px medium capitalize; */
   border-radius: 50%;
   margin: 0 auto;
   animation: scroll-animation 1.5s cubic-bezier(0, 0, 0.2, 1) 1s infinite;
+}
+
+.about-header {
+  font-size: 1.5rem;
+  font-family: Rubik-Medium;
+  color: #515f6c;
+}
+@media (min-width: 768px) {
+  .about-header {
+    font-size: 1.7rem;
+    max-width: 60%;
+  }
+}
+
+.about-subheader {
+  margin: 10px 0 20px 0;
+  font-size: 1rem;
+  color: #606d7b;
+  font-family: Rubik-MediumItalic;
+}
+@media (min-width: 768px) {
+  .about-subheader {
+    max-width: 70%;
+  }
+}
+
+.about-paragraph {
+  font-size: 0.8rem;
+  color: #606d7b;
+  font-family: Rubik-regular;
+}
+.about-paragraph:last-child {
+  margin: 10px 0;
+}
+@media (min-width: 768px) {
+  .about-paragraph {
+    max-width: 95%;
+  }
+}
+
+.about-image {
+  align-self: center;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
 }
 
 footer {

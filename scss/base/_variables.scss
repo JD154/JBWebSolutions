@@ -1,3 +1,6 @@
 $main-border-radius: 4px;
-$gradient-bg: rgb(102,126,234) linear-gradient(90deg, rgba(102,126,234,1) 0%, rgba(118,75,162,1) 100%);
+/* $gradient-bg: rgb(102,126,234) linear-gradient(90deg, rgba(102,126,234,1) 0%, rgba(118,75,162,1) 100%); */
+$gradient-bg: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); 
+/* $gradient-bg: linear-gradient(to right, #06beb6, #48b1bf); */
+/* $gradient-bg: linear-gradient(to right, #36d1dc, #5b86e5); */
 $contrast-bg: #F7F7F7;

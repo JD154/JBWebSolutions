@@ -5,9 +5,14 @@
     cursor: pointer;
     font-size: 0.8em;
     font-family: 'Rubik-light', sans-serif;
-    text-transform: uppercase;
+    text-transform: lowercase;
     color: #ffffff;
+    font-size: 0.9rem;
     
+    &::first-letter{
+        text-transform: uppercase;
+    }
+
     @include r(480){
         width: 160px;
     }

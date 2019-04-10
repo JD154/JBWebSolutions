@@ -1,19 +1,20 @@
 .hero-header{
     padding-top: 50px; 
-    background: $gradient-bg;
     position: fixed;
     top: 0;
     z-index: 1;
     width: 100%;
     transition: padding 0.4s cubic-bezier(0.0, 0.0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.0, 0.0, 0.2, 1);
+    
+}
 
-    &.scroll{
-        padding: 10px 0;
-    }
+.scroll{
+    background: $gradient-bg;
+    padding: 10px 0;
+}
 
-    &.box-shadow{
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-    }
+.box-shadow{
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
 
 .nav-wrapper{
@@ -67,11 +68,11 @@
 
 .section-link{
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #ffffff;
     opacity: 0.5;
     font-family: 'Rubik-light', sans-serif;
-    font-size: 0.8em;
+    font-size: 0.9em;
     transition: opacity 0.4s cubic-bezier(0.0, 0.0, 0.2, 1);
 
     &.current, &:hover{

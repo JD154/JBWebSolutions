@@ -1,6 +1,7 @@
 .section-title{
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 
     h1{
         position: relative;
@@ -30,19 +31,22 @@
 }
 
 .section-padding{
-    padding: 100px 0;
+    padding: 80px 0;
     height: 100%;
-/*     min-height: 650px;
- */}
+}
 
 .split-view{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 60px 0;
+    min-height: 650px;
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 100px;
 
     @include r(768){
-        flex-direction: row;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+        grid-row-gap: 100px;
     }
 }
 
@@ -50,17 +54,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-
-    &:first-child{
-        margin-bottom: 40px;
+    
+    &:nth-child(2), &:nth-child(3), &:nth-child(6){
+        display: none;
     }
 
     @include r(768){
-        width: 50%;
-
-        &:first-child{
-            margin-bottom: 0;
+        &:nth-child(2), &:nth-child(3), &:nth-child(6){
+            display: flex;
+        }
+        &:nth-child(2), &:nth-child(6){
+            align-items: flex-end;
         }
     }
 }

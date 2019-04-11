@@ -13,7 +13,8 @@
 }
 
 .skill-name, .skill-percent{
-    font-family: 'Rubik-light', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
     font-size: 0.8em;
     color: $grey-shade5;
 }
@@ -65,7 +66,8 @@
 
 .skill-header{
     margin-bottom: 20px;
-    font-family: 'Rubik-medium', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
     font-size: 1.5em;
     color: $grey-shade4;
 }

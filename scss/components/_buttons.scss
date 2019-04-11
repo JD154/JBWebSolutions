@@ -1,20 +1,20 @@
 .btn{
-    width: 140px;
+    width: 120px;
     height: 45px;
     border-radius: $main-border-radius;
     cursor: pointer;
-    font-size: 0.8em;
-    font-family: 'Rubik-light', sans-serif;
-    text-transform: lowercase;
-    color: #ffffff;
     font-size: 0.9rem;
-    
-    &::first-letter{
-        text-transform: uppercase;
-    }
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    transition: box-shadow .2s cubic-bezier(0.0,0.0,0.2,1);
 
     @include r(480){
         width: 160px;
+    }
+
+    &:hover{
+        box-shadow: $box-shadow-dp8;
     }
 }
 
@@ -26,4 +26,15 @@
 .btn-gradient{
     background: $gradient-bg;
     border: none;
+}
+
+.btn-green{
+    background: $green-shade6;
+    border: none;
+}
+
+.btn-white{
+    background: #ffffff;
+    border: none;
+    color: #0082c8;
 }

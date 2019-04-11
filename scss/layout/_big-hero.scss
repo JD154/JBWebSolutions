@@ -16,7 +16,7 @@
     height: 100%;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, 150px);
+    grid-template-columns: repeat(auto-fill, 200px);
     grid-template-rows: 1fr;
     transform: skew(-40deg);
     
@@ -44,17 +44,20 @@
     h2{
         margin-bottom: 20px;
         font-size: 2rem;
-        font-family: 'Rubik-Regular', sans-serif;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
     }
 
     h1{
         font-size: 2.5rem;
-        font-family: 'Rubik-Medium', sans-serif;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
     }
 
     p{
         font-size: 1rem;
-        font-family: 'Rubik-light', sans-serif;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 300;
         color: rgba($color: #ffffff, $alpha: 0.8);
         text-align: center;
         margin: 32px 0 32px 0;

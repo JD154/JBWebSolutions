@@ -32,7 +32,7 @@
         content: '';
         height: 7px;
         border-radius: $main-border-radius;
-        background: $gradient-bg;
+        background: linear-gradient(to right, #06beb6, #48b1bf); 
     }
 }
 

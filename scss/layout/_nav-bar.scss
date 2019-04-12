@@ -59,11 +59,11 @@
     @include r(768){
         display: flex;
         align-items: center;
-
-        li{
-            padding: 0 24px;
-        }
     }
+}
+
+.nav-link:not(:last-child){
+    padding: 0 24px;
 }
 
 .section-link{
@@ -91,4 +91,5 @@
     border-radius: 2px;
     background-color: #ffffff;
     transform-origin: center;
+    transition: all 0.4s cubic-bezier(0.0, 0.0, 0.2, 1);
 }

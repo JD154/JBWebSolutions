@@ -3,12 +3,12 @@
 
 // base files
 @import 'base/reset';
-@import 'base/variables';
-@import 'base/container';
-@import 'base/keyframes';
 @import 'base/color-system';
 @import 'base/font-system';
+@import 'base/container';
+@import 'base/keyframes';
 @import 'base/box-shadows';
+@import 'base/variables';
 
 //component files
 @import 'components/sections';

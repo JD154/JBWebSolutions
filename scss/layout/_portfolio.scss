@@ -1,9 +1,17 @@
 #portfolio{
     background-color: rgb(80, 79, 95);
-
+    
     .section-title{
         h1{
             color: $contrast-bg;
         }
+    }
+    
+    .section-header{
+        color: $grey-shade10;
+    }
+
+    .section-paragraph{
+        color: $grey-shade8;
     }
 }

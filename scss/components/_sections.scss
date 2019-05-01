@@ -27,7 +27,7 @@ section:not(#hero){
             bottom: -12px;
             left: 0;
             right: 0;
-            width: 70%;
+            width: 50px;
             height: 3px;
             margin: 0 auto;
             background: $gradient-bg;
@@ -36,10 +36,23 @@ section:not(#hero){
     }
 }
 
+.centered-view{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+
+    @include r(768){
+        width: 60%;
+    }
+
+    @include r(1280){
+        width: 80%;
+    }
+}
 
 .split-view{
     min-height: 650px;
-    margin: 40px 0;
+    margin: 64px 0;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -50,6 +63,10 @@ section:not(#hero){
         grid-gap: 50px;
         grid-row-gap: 100px;
     }
+}
+
+#skills .split-view{
+    min-height: 0px;
 }
 
 .split-col{
@@ -90,11 +107,11 @@ section:not(#hero){
 .section-paragraph{
     font-size: 0.8rem;
     color: $grey-shade6;
-    line-height: 1.4rem;
+    line-height: 1.6rem;
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
     text-align: justify;
-    margin: 10px 0;
+    margin-top: 20px;
     
     @include r(768){
         text-align: left;
@@ -104,7 +121,7 @@ section:not(#hero){
 
 .image{
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     height: auto;
     
 }

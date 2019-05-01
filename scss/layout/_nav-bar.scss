@@ -41,14 +41,17 @@
     }
 }
 
-.logo-brand{
-    width: 160px;
-    height: 100%;
+.logo-wrapper{
     margin: 0 auto;
 
     @include r(768){
         margin: 0;
     }
+}
+
+.logo-brand{
+    width: 160px;
+    height: 100%;
 }
 
 .nav-links{
